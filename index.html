@@ -1,155 +1,120 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>UPlan - plan for you!</title><meta name="author" content="UPlan"><meta name="copyright" content="UPlan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="We just plan for you!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="UPlan">
-<meta property="og:url" content="https://uplanfor.github.io/index.html">
-<meta property="og:site_name" content="UPlan">
-<meta property="og:description" content="We just plan for you!">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://uplanfor.github.io/image/ustarflower.png">
-<meta property="article:author" content="UPlan">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://uplanfor.github.io/image/ustarflower.png"><link rel="shortcut icon" href="/image/ustarflower.png"><link rel="canonical" href="https://uplanfor.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: 'Just',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'UPlan',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-04-17 16:30:14'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="shortcut icon" href="image/icon.ico">
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>首页 | 星光工作室</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="logo"></div>
+        <ul id="menu_list" class="hidden_menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="zone.html">领地</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+        <div class="menu_toggle" onclick="show_menu()"></div>
+    </div>
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+    <div class="main_cover">
+        <img src="image/sunny_beach.jpg" class="background_img"/>
+        <div class="center_title">
+            <h1>The Starlight Studio</h1>
+            <p>期待与漫天繁星的相遇!</p>
+            <a href="about.html" class="rough">了解更多</a>
+        </div>
+    </div>
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/image/ustarflower.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/image/farm.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">UPlan</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">UPlan</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/04/16/dynamic_array/" title="动态数组 | 手写数据结构"><img class="post_bg" src="/image/farm.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="动态数组 | 手写数据结构"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/16/dynamic_array/" title="动态数组 | 手写数据结构">动态数组 | 手写数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-16T13:10:32.000Z" title="Created 2022-04-16 21:10:32">2022-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C++</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/04/16/blender_learn/" title="了解Blender | Blender"><img class="post_bg" src="/image/zone.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="了解Blender | Blender"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/16/blender_learn/" title="了解Blender | Blender">了解Blender | Blender</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-16T13:10:32.000Z" title="Created 2022-04-16 21:10:32">2022-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Blender/">Blender</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/04/16/system_control/" title="stdlib.h | C语言"><img class="post_bg" src="/image/only_tonight.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="stdlib.h | C语言"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/16/system_control/" title="stdlib.h | C语言">stdlib.h | C语言</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-16T13:10:32.000Z" title="Created 2022-04-16 21:10:32">2022-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/04/16/ObjectOrientedPrograming/" title="面向对象 | lua"><img class="post_bg" src="/image/redsky.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="面向对象 | lua"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/16/ObjectOrientedPrograming/" title="面向对象 | lua">面向对象 | lua</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-16T13:06:32.000Z" title="Created 2022-04-16 21:06:32">2022-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/lua/">lua</a></span></div><div class="content">面向对象是一种一种编程范式。面向对象是一种对现实世界理解和抽象的方法，是计算机编程技术发展到一定阶段后的产物。
-什么是对象例如一个人，一台智能手机，一只鸭，都是可以称为对象！对象指具体的某一个事物！
-对象可以有他自己的行为，例如人这个对象可以跑步，睡觉，智能手机可以打电话，发email；对象可以有他自己的属性，例如人这个对象有他年龄的这个属性，智能手机有他的型号，价格等属性。
-面向对象有三大特征：封装，继承，多态。早期的计算机编程是基于面向过程的方法。在面向对象的世界中，一切事物皆对象，通过面向对象的方式，将现实世界的事物抽象成对象。
-面向对象，就是以对象的方式来思考，那么我们怎样才能创建一个对象呢？让我们一起看看吧！
-一种实现方式（对象也称作类）
-1234567891011121314151617181920212223242526272829-- 一般构造函数的名称格式就是 类名:new()function Person:new()    -- 首先先要设置Person的__index键为Person    Person.__index = Person    -- 然后创建一个t ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/image/ustarflower.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">UPlan</div><div class="author-info__description">We just plan for you!</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/uplanfor"><i class="fab fa-github"></i><span>Follow Me On Github</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to my blog!</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/dynamic_array/" title="动态数组 | 手写数据结构"><img src="/image/farm.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="动态数组 | 手写数据结构"/></a><div class="content"><a class="title" href="/2022/04/16/dynamic_array/" title="动态数组 | 手写数据结构">动态数组 | 手写数据结构</a><time datetime="2022-04-16T13:10:32.000Z" title="Created 2022-04-16 21:10:32">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/blender_learn/" title="了解Blender | Blender"><img src="/image/zone.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="了解Blender | Blender"/></a><div class="content"><a class="title" href="/2022/04/16/blender_learn/" title="了解Blender | Blender">了解Blender | Blender</a><time datetime="2022-04-16T13:10:32.000Z" title="Created 2022-04-16 21:10:32">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/system_control/" title="stdlib.h | C语言"><img src="/image/only_tonight.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="stdlib.h | C语言"/></a><div class="content"><a class="title" href="/2022/04/16/system_control/" title="stdlib.h | C语言">stdlib.h | C语言</a><time datetime="2022-04-16T13:10:32.000Z" title="Created 2022-04-16 21:10:32">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/ObjectOrientedPrograming/" title="面向对象 | lua"><img src="/image/redsky.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="面向对象 | lua"/></a><div class="content"><a class="title" href="/2022/04/16/ObjectOrientedPrograming/" title="面向对象 | lua">面向对象 | lua</a><time datetime="2022-04-16T13:06:32.000Z" title="Created 2022-04-16 21:06:32">2022-04-16</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>Categories</span>
-            
+    <div class="container">
+        <!-- first -->
+        <div class="first_intro clear_div">
+            <div class="text_intro left">
+                <h1>我们使地图变得更加完美！</h1>
+                <p>星光工作室有他自己的建筑团队，宣传团队，技术团队。</p>
+                <p>团队致力于做地图，使地图不断完善！</p>
+                <p>目前，星光工作室的地图已经有超过5张地图获得精选，并且有鉴赏家，的实力值得信赖！</p>
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Blender/"><span class="card-category-list-name">Blender</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C/"><span class="card-category-list-name">C</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C/"><span class="card-category-list-name">C++</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/lua/"><span class="card-category-list-name">lua</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">数据结构</a> <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93%E7%A0%94%E7%A9%B6/" style="font-size: 1.1em; color: #999">标准库研究</a> <a href="/tags/%E6%A8%A1%E5%9E%8B%E5%BB%BA%E9%80%A0/" style="font-size: 1.1em; color: #999">模型建造</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 1.5em; color: #99a9bf">面向对象</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">April 2022</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-17T08:30:14.301Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By UPlan</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <div class="img_intro right">
+                <img src="https://cdn.retiehe.com/cached-f780e1c4a693fc81d4c9bd275b05ec5e/starlight.work/image/cebrelation.jpg" alt="">
+            </div>
+        </div>
+        <!-- second -->
+        <div class="second_intro clear_div">
+            <div class="text_intro right">
+                <h1>我们不断追星追光！</h1>
+                <p>青春短暂，我们应该在这有限的时间内超越自我！</p>
+                <p>星光工作室因而不断超越自我，设立了多个分组。每个分组每天都有激烈的讨论，为的就是让用户体验更好的地图！</p>
+            </div>
+            <div class="img_intro left">
+                <img src="https://cdn.retiehe.com/cached-54e22b86a6c987ffa442ae912399185f/starlight.work/image/only_tonight.png" alt="">
+            </div>
+        </div>
+        <!-- third -->
+        <div class="third_intro clear_div">
+            <h1>星光工作室精彩作品</h1>
+            <img src="https://cdn.retiehe.com/cached-c50e47278ef6de4f3f961655dc0e46d8/starlight.work/image/dreamland.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-5aec752203f3922b53e326c806016805/starlight.work/image/gun_fight.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-e1618f3557cc21bd8bfebce1bb6e87b6/starlight.work/image/bookstore.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-2950e45d0ba5712d2abd1230390df4c3/starlight.work/image/space_flied.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-2be7b3f5f219de2a594db2cde5878281/starlight.work/image/small_town.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-5aaea6b7623a7ba92477b197b811a47f/starlight.work/image/the_city.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-61bad511c8b2f6c952a62a5669b72427/starlight.work/image/sail_risk.webp" alt="">
+            <img src="https://cdn.retiehe.com/cached-ec5556874619e0187c5066a3d47889cd/starlight.work/image/swap_things.webp" alt="">
+        </div>
+    </div>
+
+    <div class="studio_intro clear_div">
+
+        <div class="studio_intro_box">
+            <h2>关于星光工作室</h2>
+            <p>
+                星光工作室建立于2020年10月8日。
+                是迷你世界的一个中级的工作室。
+                <br>“星光不问赶路人，时光不负有心人”，我们坚信每一个星星都可以发光发热
+                <br>想了解更多吗?<a href="//www.starlight.work/about.html">请点击我！</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="info">
+            <a class="logo" href="about.html"></a>
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="links clear_div">
+            <dl>
+                <dt>关于工作室</dt>
+                <dd><a href="about.html">关于我们</a></dd>
+                <dd><a href="about.html#join_us">加入我们</a></dd>
+                <dd><a href="about.html#contact_us">联系我们</a></dd>
+                <dd><a href="about.html#carrer">发展历程</a></dd>
+            </dl>
+            <dl>
+                <dt>星光风范</dt>
+                <dd><a href="zone.html">星光领地</a></dd>
+                <dd><a href="zone.html">星光公告</a></dd>
+                <dd><a href="https:starlight.feishu.cn/docs/doccnVG1ihNp41tPK6idcsNXuZc/">工作室问答</a></dd>
+                <dd><a href="zone.html#notice">有用工具</a></dd>
+            </dl>
+            <dl>
+                <dt>友情链接</dt>
+                <dd><a href="https:www.starlight.work/">真正的官网</a></dd>
+                <dd><a href="https:blog.kaikai.zone/">凯凯的博客</a></dd>
+                <dd><a href="https:user.qzone.qq.com/3260922891">安安的空间</a></dd>
+                <dd><a href="https:www.github.com/">GitHub</a></dd>
+            </dl>
+        </div>
+        <p style="text-align: center;">copyright&copy TheStarlightStudio All Rights Reserved</p>
+    </div>
+</body>
+</html>
